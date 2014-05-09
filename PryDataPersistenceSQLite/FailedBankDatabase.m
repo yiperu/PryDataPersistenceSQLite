@@ -28,12 +28,15 @@ static FailedBankDatabase *_database;
 - (id)init {
     if ((self = [super init])) {
         
-        
+        //-- Base de Datos con banklist.sqlite3
         //NSString *sqLiteDb = [[NSBundle mainBundle] pathForResource:@"banklist" ofType:@"sqlite3"];
-        //--
+        
+        //-- Base de Datos con data.sqlite
+        
         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDirectory = [paths objectAtIndex:0];
         NSString *sqLiteDb = [documentsDirectory stringByAppendingPathComponent:@"data.sqlite"];
+    
         
         if (sqlite3_open([sqLiteDb UTF8String], &_database) != SQLITE_OK) {
             sqlite3_close(_database);

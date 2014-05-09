@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "FailedBankDatabase.h"
-//#import "FailedBankInfo.h"
+#import "FailedBankInfo.h"
 #import "FieldEntity.h"
 
 @implementation AppDelegate
@@ -19,17 +19,22 @@
     
     // Esto es para el ejemplo de los Faileb Banks:
     /*
+    NSLog(@"========================");
     NSArray *failedBankInfos = [FailedBankDatabase database].failedBankInfos;
     for (FailedBankInfo *info in failedBankInfos) {
         NSLog(@"%d: %@, %@, %@", info.uniqueId, info.name, info.city, info.state);
     }
     */
     
+    
     // Esto funciona para los datos FIELDS
+    
+    NSLog(@"========================");
     NSArray *failedBankInfos = [FailedBankDatabase database].retornaInfoFields;
     for (FieldEntity *info in failedBankInfos) {
         NSLog(@"%d: %@", info.uniqueId, info.name);
     }
+    
 
     return YES;
 }
