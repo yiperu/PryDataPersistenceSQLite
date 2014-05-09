@@ -22,6 +22,9 @@
 		CB46FE44191D31FE00D327B3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB46FE42191D31FE00D327B3 /* InfoPlist.strings */; };
 		CB46FE46191D31FE00D327B3 /* PryDataPersistenceSQLiteTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46FE45191D31FE00D327B3 /* PryDataPersistenceSQLiteTests.m */; };
 		CB46FE50191D32E700D327B3 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB46FE4F191D32E700D327B3 /* libsqlite3.dylib */; };
+		CB46FE53191D3F9C00D327B3 /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46FE52191D3F9C00D327B3 /* FailedBankInfo.m */; };
+		CB46FE56191D406400D327B3 /* FailedBankDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46FE55191D406400D327B3 /* FailedBankDatabase.m */; };
+		CB46FE59191D4A8E00D327B3 /* FieldEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CB46FE58191D4A8E00D327B3 /* FieldEntity.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,12 @@
 		CB46FE43191D31FE00D327B3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB46FE45191D31FE00D327B3 /* PryDataPersistenceSQLiteTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PryDataPersistenceSQLiteTests.m; sourceTree = "<group>"; };
 		CB46FE4F191D32E700D327B3 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CB46FE51191D3F9C00D327B3 /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
+		CB46FE52191D3F9C00D327B3 /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
+		CB46FE54191D406400D327B3 /* FailedBankDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankDatabase.h; sourceTree = "<group>"; };
+		CB46FE55191D406400D327B3 /* FailedBankDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankDatabase.m; sourceTree = "<group>"; };
+		CB46FE57191D4A8E00D327B3 /* FieldEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FieldEntity.h; sourceTree = "<group>"; };
+		CB46FE58191D4A8E00D327B3 /* FieldEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FieldEntity.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +132,12 @@
 				CB46FE30191D31FE00D327B3 /* ViewController.m */,
 				CB46FE32191D31FE00D327B3 /* Images.xcassets */,
 				CB46FE21191D31FE00D327B3 /* Supporting Files */,
+				CB46FE51191D3F9C00D327B3 /* FailedBankInfo.h */,
+				CB46FE52191D3F9C00D327B3 /* FailedBankInfo.m */,
+				CB46FE54191D406400D327B3 /* FailedBankDatabase.h */,
+				CB46FE55191D406400D327B3 /* FailedBankDatabase.m */,
+				CB46FE57191D4A8E00D327B3 /* FieldEntity.h */,
+				CB46FE58191D4A8E00D327B3 /* FieldEntity.m */,
 			);
 			path = PryDataPersistenceSQLite;
 			sourceTree = "<group>";
@@ -253,7 +268,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB46FE56191D406400D327B3 /* FailedBankDatabase.m in Sources */,
+				CB46FE53191D3F9C00D327B3 /* FailedBankInfo.m in Sources */,
 				CB46FE31191D31FE00D327B3 /* ViewController.m in Sources */,
+				CB46FE59191D4A8E00D327B3 /* FieldEntity.m in Sources */,
 				CB46FE2B191D31FE00D327B3 /* AppDelegate.m in Sources */,
 				CB46FE27191D31FE00D327B3 /* main.m in Sources */,
 			);

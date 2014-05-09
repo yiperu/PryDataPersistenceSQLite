@@ -29,15 +29,14 @@
 {
     [super viewDidLoad];
 
+    
+    /*
     sqlite3 *database;
     if (sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK) {
         sqlite3_close(database);
         NSAssert(0, @"Failed to open database");
     }
     
-    // Useful C trivia: If two inline strings are separated by nothing
-    // but whitespace (including line breaks), they are concatenated into
-    // a single string:
     NSString *createSQL = @"CREATE TABLE IF NOT EXISTS FIELDS "
     "(ROW INTEGER PRIMARY KEY, FIELD_DATA TEXT);";
     char *errorMsg;
@@ -62,22 +61,26 @@
     }
     sqlite3_close(database);
     
+    
     UIApplication *app = [UIApplication sharedApplication];
+    
     [[NSNotificationCenter defaultCenter]
      addObserver:self
      selector:@selector(applicationWillResignActive:)
      name:UIApplicationWillResignActiveNotification
      object:app];
+    */
+    
 }
 
 - (void)applicationWillResignActive:(NSNotification *)notification
 {
     sqlite3 *database;
-    if (sqlite3_open([[self dataFilePath] UTF8String], &database)
-        != SQLITE_OK) {
+    if (sqlite3_open([[self dataFilePath] UTF8String], &database) != SQLITE_OK) {
         sqlite3_close(database);
         NSAssert(0, @"Failed to open database");
     }
+    
     for (int i = 0; i < 4; i++) {
         UITextField *field = self.lineFields[i];
         // Once again, inline string concatenation to the rescue:
@@ -85,8 +88,7 @@
         "VALUES (?, ?);";
         char *errorMsg = NULL;
         sqlite3_stmt *stmt;
-        if (sqlite3_prepare_v2(database, update, -1, &stmt, nil)
-            == SQLITE_OK) {
+        if (sqlite3_prepare_v2(database, update, -1, &stmt, nil) == SQLITE_OK) {
             sqlite3_bind_int(stmt, 1, i);
             sqlite3_bind_text(stmt, 2, [field.text UTF8String], -1, NULL);
         }
@@ -96,6 +98,7 @@
     }
     sqlite3_close(database);
 }
+
 
 - (void)didReceiveMemoryWarning
 {

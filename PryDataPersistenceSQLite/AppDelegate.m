@@ -7,12 +7,30 @@
 //
 
 #import "AppDelegate.h"
+#import "FailedBankDatabase.h"
+//#import "FailedBankInfo.h"
+#import "FieldEntity.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Esto es para el ejemplo de los Faileb Banks:
+    /*
+    NSArray *failedBankInfos = [FailedBankDatabase database].failedBankInfos;
+    for (FailedBankInfo *info in failedBankInfos) {
+        NSLog(@"%d: %@, %@, %@", info.uniqueId, info.name, info.city, info.state);
+    }
+    */
+    
+    // Esto funciona para los datos FIELDS
+    NSArray *failedBankInfos = [FailedBankDatabase database].retornaInfoFields;
+    for (FieldEntity *info in failedBankInfos) {
+        NSLog(@"%d: %@", info.uniqueId, info.name);
+    }
+
     return YES;
 }
 							
